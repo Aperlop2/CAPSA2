@@ -45,12 +45,13 @@ nav ul {
 
 nav ul li {
     position: relative;
+    margin-right: 65px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding: 10px 15px;
+    padding: 12px 20px;
     display: block;
 }
 
@@ -66,7 +67,7 @@ nav ul li:hover .submenu {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #4A91E2;
+    color: #070345;
     /* Color azul al pasar el cursor */
 }
 
@@ -92,12 +93,20 @@ nav ul li:hover .submenu {
     position: relative;
     display: flex;
     justify-content: flex-start;
+    /* Mueve hacia la izquierda */
     align-items: center;
-    text-align: left;
     flex-direction: column;
-    margin-top: 0;
-    width: 100%;
+    text-align: center;
+    /* Centra el contenido */
+    margin-left: -7%;
+    /* Ajusta para mover más hacia la izquierda */
+    width: auto;
     z-index: 1;
+}
+
+.text-section img {
+    margin-top: 0;
+    /* Si es necesario, ajusta también la imagen */
 }
 
 .text-section h2 {
@@ -132,10 +141,13 @@ nav ul li:hover .submenu {
 }
 
 .text-section .btn {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    /* Cambiado para alineación */
+    margin-top: 20px;
+    left: 60;
+    /* Centrado */
+    transform: none;
+    /* Elimina la transformación */
     padding: 10px 20px;
     background-color: transparent;
     border: 2px solid #2964a7;
@@ -159,6 +171,15 @@ nav ul li:hover .submenu {
 .card {
     border: none;
     background-color: transparent;
+    width: 300px;
+    height: 450px;
+}
+
+.card img {
+    height: 300px;
+    /* Cambia este valor según tus necesidades */
+    object-fit: cover;
+    /* Asegura que la imagen se ajuste correctamente */
 }
 
 .info-box {
@@ -247,10 +268,18 @@ nav ul li:hover .submenu {
 
 .card-img-top {
     border-radius: 50%;
-    width: 150px;
+    width: 200px;
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+    /* Amplía ligeramente la imagen */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Agrega sombra para un efecto de profundidad */
 }
 
 .card-title {
@@ -287,7 +316,7 @@ nav ul li:hover .submenu {
 }
 
 .descripcion {
-    background-color: #0d9d75;
+    background-color: #4a91e2;
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -324,6 +353,17 @@ nav ul li:hover .submenu {
 
 .contact-button:hover {
     background-color: #326cad;
+}
+
+.img-fluid {
+    border-radius: 15px;
+    /* Ajusta el valor para redondear más o menos */
+    width: 50%;
+    /* Asegura que la imagen sea responsiva */
+    max-width: 100px;
+    /* Tamaño máximo opcional */
+    height: auto;
+    /* Mantiene las proporciones */
 }
 
 footer {
@@ -420,7 +460,9 @@ footer {
     display: inline-block;
     font-size: 20px;
     text-decoration: none;
-    margin-top: -60px;
+    position: relative;
+    margin-top: -5%;
+    /* Ajusta la distancia vertical */
     margin-left: 50px;
 }
 
